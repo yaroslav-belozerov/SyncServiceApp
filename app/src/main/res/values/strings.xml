@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SyncServiceApp</string>
+    <string name="sync_in_progress">Sync...</string>
+</resources>
