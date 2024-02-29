@@ -62,27 +62,23 @@ jobs:
           - 31
           - 34
         include:
-          - os: ubuntu-latest
-            arch: x86
-            api-level: 26
-            target: google_apis
-            channel: stable
-          - os: ubuntu-latest
-            arch: x86
+          - os: macos-latest
             api-level: 27
             target: google_apis
-            channel: stable
-          - os: ubuntu-latest
-            arch: x86
+            arch: x86_64
+          - os: macos-latest
             api-level: 28
             target: google_apis
-            channel: stable
-          - os: ubuntu-latest
-            arch: x86
+            arch: x86_64
+          - os: macos-latest
             api-level: 29
             target: google_apis
-            channel: stable
-          - os: ubuntu-latest
+            arch: x86_64
+          - os: macos-latest
+            api-level: 31
+            target: google_apis
+            arch: x86_64
+          - os: macos-latest
             arch: x86_64
             api-level: 34
             target: aosp_atd
