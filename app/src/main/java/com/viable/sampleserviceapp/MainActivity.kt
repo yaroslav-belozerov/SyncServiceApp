@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.currentCompositionLocalContext
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.viable.sampleserviceapp.ui.theme.SampleServiceAppTheme
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
             SampleServiceAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = applicationContext.resources.getString(R.string.hello),
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = name,
         modifier = modifier
     )
 }
@@ -44,6 +45,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     SampleServiceAppTheme {
-        Greeting("Android")
+        Greeting("Hello!")
     }
 }
